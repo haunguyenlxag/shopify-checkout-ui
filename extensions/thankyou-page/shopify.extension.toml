@@ -1,0 +1,120 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/api/checkout-extensions/checkout/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "2025-04"
+
+[[extensions]]
+name = "thankyou-page"
+handle = "thankyou-page"
+type = "ui_extension"
+
+# Controls where in Shopify your extension will be injected,
+# and the file that contains your extension's source code. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
+
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.thank-you.block.render"
+export = "thankYouBlock"
+
+[[extensions.targeting.metafields]]
+  namespace = "custom"
+  key = "customer_type"
+
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify's storefront API.
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#network-access
+# network_access = true
+
+# Loads metafields on checkout resources, including the cart,
+# products, customers, and more. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#metafields
+
+[[extensions.metafields]]
+namespace = "custom"
+key = "customer_type"
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_other_key"
+
+# Defines settings that will be collected from merchants installing
+# your extension. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#settings-definition
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "link_text"
+type = "single_line_text_field"
+name = "Title text"
+description = "Enter a title"
+
+[[extensions.settings.fields]]
+key = "url_link"
+type = "single_line_text_field"
+name = "Url link"
+description = "URL for the link text. The order ID will be automatically appended as 'id' parameter to this URL."
+
+[[extensions.settings.fields]]
+key = "description_text"
+type = "multi_line_text_field"
+name = "Description text"
+description = "Enter a description for the link on the thank you page"
+
+[[extensions.settings.fields]]
+key = "image_url"
+type = "single_line_text_field"
+name = "Banner"
+description = "Image url"
+
+[[extensions.settings.fields]]
+key = "font_size"
+type = "single_line_text_field"
+name = "Font Size Link"
+description = "Select the font size for your text"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"extraSmall\", \"small\", \"base\", \"medium\", \"large\", \"extraLarge\"]"
+
+[[extensions.settings.fields]]
+key = "color_link"
+type = "single_line_text_field"
+name = "Color for title"
+description = "Select the color title"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"base\", \"accent\", \"decorative\", \"interactive\", \"subdued\", \"info\", \"success\", \"warning\", \"critical\", \"monochrome\"]"
+
+[[extensions.settings.fields]]
+key = "color_description"
+type = "single_line_text_field"
+name = "Color for description"
+description = "Select the color for your text"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"base\", \"accent\", \"decorative\", \"interactive\", \"subdued\", \"info\", \"success\", \"warning\", \"critical\", \"monochrome\"]"
+
+
+[[extensions.settings.fields]]
+key = "border_content"
+type = "single_line_text_field"
+name = "Border content"
+description = "Select border for the container"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"none\", \"base\", \"dotted\"]"
+
+[[extensions.settings.fields]]
+key = "background_color"
+type = "single_line_text_field"
+name = "Background Color"
+description = "Select the background color for the container"
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = "[\"transparent\", \"base\", \"subdued\"]"
