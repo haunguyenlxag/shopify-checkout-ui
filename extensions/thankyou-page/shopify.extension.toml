@@ -65,7 +65,7 @@ description = "URL for the link text. The order ID will be automatically appende
 key = "description_text"
 type = "multi_line_text_field"
 name = "Description text"
-description = "Enter a description for the link on the thank you page"
+description = "Enter a description format Markdown"
 
 [[extensions.settings.fields]]
 key = "image_url"
