@@ -7,7 +7,6 @@ import {
   Page,
   Text,
   BlockStack,
-  Heading,
   Divider,
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
@@ -21,7 +20,9 @@ export default function PolicyPage() {
           <Card>
             <BlockStack gap="400">
               <div>
-                <Heading>Thankyou Block Privacy Policy</Heading>
+                <Text as="h1" variant="headingLg">
+                  Thankyou Block Privacy Policy
+                </Text>
                 <Text as="p" variant="bodyMd" color="subdued">
                   Last Update: December 2024
                 </Text>
@@ -45,7 +46,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>TABLE OF CONTENTS</Heading>
+                <Text as="h2" variant="headingMd">
+                  TABLE OF CONTENTS
+                </Text>
                 <List type="bullet">
                   <List.Item>Collection And Use Of Personal Information</List.Item>
                   <List.Item>Sharing Of Personal Information</List.Item>
@@ -59,14 +62,18 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>Collection and use of personal information</Heading>
+                <Text as="h2" variant="headingMd">
+                  Collection and use of personal information
+                </Text>
                 <Text as="p" variant="bodyMd">
                   The kinds of personal information that we process, and how we process it, 
                   depends on whether we are acting on behalf of our Customers, or whether 
                   we are collecting, using, and disclosing personal information for Thankyou Block's own purposes.
                 </Text>
 
-                <Heading level={3}>How we collect and use personal information on behalf of our Customers</Heading>
+                <Text as="h3" variant="headingMd">
+                  How we collect and use personal information on behalf of our Customers
+                </Text>
                 <Text as="p" variant="bodyMd">
                   The following are some examples of the personal information we may collect 
                   and analyze to provide the Services to our Customers.
@@ -163,7 +170,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>Sharing of personal information</Heading>
+                <Text as="h2" variant="headingMd">
+                  Sharing of personal information
+                </Text>
                 <Text as="p" variant="bodyMd">
                   We do not sell or disclose your personal information to third parties 
                   without your consent, except as set forth below or as required or permitted by law.
@@ -215,7 +224,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>Safeguards and retention</Heading>
+                <Text as="h2" variant="headingMd">
+                  Safeguards and retention
+                </Text>
                 <Text as="p" variant="bodyMd">
                   We have implemented reasonable administrative, technical and physical 
                   measures in an effort to safeguard the personal information in our custody 
@@ -241,7 +252,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>Access to information</Heading>
+                <Text as="h2" variant="headingMd">
+                  Access to information
+                </Text>
                 <Text as="p" variant="bodyMd">
                   If we receive a request from an individual to access or update personal 
                   information we maintain on behalf of a customer, we will direct that 
@@ -261,7 +274,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>Updates to the privacy policy</Heading>
+                <Text as="h2" variant="headingMd">
+                  Updates to the privacy policy
+                </Text>
                 <Text as="p" variant="bodyMd">
                   We may update this privacy policy periodically to reflect changes to our 
                   privacy practices. We encourage you to periodically review this page to 
@@ -273,7 +288,9 @@ export default function PolicyPage() {
               <Divider />
 
               <div>
-                <Heading level={2}>CONTACT US</Heading>
+                <Text as="h2" variant="headingMd">
+                  CONTACT US
+                </Text>
                 <Text as="p" variant="bodyMd">
                   If you have any questions or comments about this privacy policy or the 
                   manner in which we or our service providers treat your personal information, 
