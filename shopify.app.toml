@@ -3,7 +3,7 @@
 client_id = "7007e74eee55d8ab8f72fb50cc2154be"
 name = "Thankyou Block"
 handle = "thankyou-block"
-application_url = "https://yep-shopify.netlify.app"
+application_url = "https://yep-checkout.netlify.app"
 embedded = true
 
 [build]
@@ -26,7 +26,7 @@ api_version = "2025-04"
 scopes = "read_products"
 
 [auth]
-redirect_urls = ["https://yep-shopify.netlify.app/auth/callback", "https://yep-shopify.netlify.app/auth/shopify/callback", "https://yep-shopify.netlify.app/api/auth/callback"]
+redirect_urls = ["https://yep-checkout.netlify.app/auth/callback", "https://yep-checkout.netlify.app/auth/shopify/callback", "https://yep-checkout.netlify.app/api/auth/callback"]
 
 [pos]
 embedded = false
